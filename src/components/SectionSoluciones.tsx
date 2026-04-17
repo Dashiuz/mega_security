@@ -1,83 +1,73 @@
-import React from "react";
+"use client";
 
-const solutions = [
-  {
-    id: "soluciones-vigilancia",
-    title: "Vigilancia Táctica",
-    desc: "Nuestro personal, armado o disuasivo, no solo vigila; se integra a la cultura de su establecimiento para prevenir y neutralizar amenazas.",
-    number: "01"
-  },
-  {
-    id: "soluciones-tecnologia",
-    title: "Ingeniería Tecnológica",
-    desc: "Supervisión milimétrica 24/7. Ecosistemas de videovigilancia, alarmas, domótica y biometría de última generación.",
-    number: "02"
-  },
-  {
-    id: "soluciones-escoltas",
-    title: "Protección Ejecutiva",
-    desc: "Unidad de élite dedicada a la custodia de altos ejecutivos. Operativos con inteligencia de ruta, contramedidas y reacción inmediata.",
-    number: "03"
-  },
-  {
-    id: "soluciones-k9",
-    title: "Unidad Canina K-9",
-    desc: "Nuestros binomios son el estándar de oro. Expertos en detección de explosivos, narcóticos y control operativo en terreno complejo.",
-    number: "04"
-  },
-  {
-    id: "soluciones-consultoria",
-    title: "Consultoría de Riesgo",
-    desc: "Auditamos sus vulnerabilidades y trazamos la matriz de mitigación de riesgos con efectividad financiera y tecnológica.",
-    number: "05"
-  }
-];
+import React from "react";
+import { motion } from "framer-motion";
 
 export default function SectionSoluciones() {
-  return (
-    <section id="soluciones" className="h-full w-full relative flex flex-col justify-start md:justify-center pt-32 pb-24 md:py-32 px-6 lg:px-24 bg-[#020205] border-t border-white/5 overflow-y-auto md:overflow-hidden overflow-x-hidden">
-      
-      {/* Background Graphic Element */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-mega-green/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3" />
+  
+  const services = [
+    { title: "Vigilancia Física", desc: "Personal altamente capacitado y seleccionado con estándares biométricos y verificación de más de 100 fuentes. Presencia disuasiva y profesional en cualquier sector económico." },
+    { title: "Monitoreo Tecnológico", desc: "Analítica avanzada de video, monitoreo IP en tiempo real y respaldo en la nube. Vigilancia 24/7 con inteligencia artificial aplicada a la detección y alertamiento temprano." },
+    { title: "Seguridad Predictiva con IA", desc: "No esperamos que ocurra el incidente. Nuestros sistemas anticipan amenazas mediante reconocimiento facial, validación biométrica y modelos de riesgo adaptativos." },
+    { title: "Servicios Caninos", desc: "Binomios especializados para detección, patrullaje y disuasión. Licencia habilitante para operación con medios caninos en todos los ambientes operativos." },
+    { title: "Vigilancia con Drones", desc: "Pilotos certificados por la Superintendencia de Vigilancia. Cobertura aérea estratégica para instalaciones de gran extensión, eventos y operaciones de alto riesgo." },
+    { title: "Consultoría e Investigación", desc: "Licencia de Consultoría, Asesoría e Investigación de la SVSP. Personal propio acreditado para diagnósticos de vulnerabilidad, auditorías de seguridad y análisis de integridad." },
+  ];
 
-      <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col gap-24">
+  const container: any = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  };
+
+  const item: any = {
+    hidden: { opacity: 0, scale: 0.95 },
+    show: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: "easeOut" } }
+  };
+
+  return (
+    <section id="servicios" className="w-full bg-mega-black py-24 md:py-32 relative z-20 border-t border-white/5">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24">
         
-        {/* Header Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-12">
-          <div className="space-y-4">
-            <span className="text-mega-green font-mono uppercase tracking-[0.3em] text-sm font-bold block">II. Vanguardia Táctica</span>
-            <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] uppercase tracking-tighter">
-              Arquitectura de<br/>
-              <span className="text-zinc-500">Seguridad 360°</span>
+        <div className="flex flex-col lg:flex-row justify-between items-end gap-10 mb-16">
+          <div className="flex-1">
+            <p className="text-mega-cyan font-semibold tracking-wider text-sm md:text-base mb-4 uppercase">
+              Nuestros servicios
+            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05]">
+              SOLUCIONES PARA CADA<br />
+              <span className="text-mega-green bg-clip-text">TIPO DE RIESGO</span>
             </h2>
           </div>
-          <p className="max-w-md text-zinc-400 font-light text-lg">
-            Diseñamos anillos de protección inquebrantables, moldeados a las necesidades críticas del sector corporativo, institucional y residencial. Soluciones definitivas, al mejor precio.
-          </p>
+          <div className="flex-1 lg:text-right max-w-lg">
+            <p className="text-lg md:text-xl text-mega-silver font-light leading-relaxed">
+              Cada servicio se configura según el nivel de riesgo, el entorno operativo y los objetivos de su empresa.
+            </p>
+          </div>
         </div>
 
-        {/* Minimalist Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-          {solutions.map((sol) => (
-            <div key={sol.id} id={sol.id} className="group relative pr-8">
-              {/* Number Accent */}
-              <span className="text-[120px] font-black leading-none text-white/[0.02] absolute -top-8 -left-4 -z-10 group-hover:text-mega-green/[0.05] transition-colors duration-500">
-                {sol.number}
-              </span>
-              
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 border-b border-white/10 pb-4">
-                  <span className="text-mega-green font-mono text-sm">{sol.number}.</span>
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wider">{sol.title}</h3>
-                </div>
-                <p className="text-zinc-500 font-light leading-relaxed group-hover:text-zinc-300 transition-colors duration-300 min-h-[100px]">
-                  {sol.desc}
+        {/* 6-Block Grid */}
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+        >
+          {services.map((svc, i) => (
+            <motion.div 
+              key={i}
+              variants={item} 
+              className="group bg-[#051112] hover:bg-[#0a2326] p-8 md:p-10 rounded-xl border border-white/5 hover:border-mega-cyan/40 transition-all duration-500 cursor-default flex flex-col justify-end min-h-[300px]"
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-mega-cyan transition-colors duration-300">{svc.title}</h3>
+                <p className="text-mega-silver font-light leading-relaxed text-sm md:text-base opacity-80 group-hover:opacity-100 transition-opacity">
+                  {svc.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

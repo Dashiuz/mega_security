@@ -73,24 +73,7 @@ export default function NavigationMenu() {
 
   return (
     <>
-      {/* Return to Top Button (Top Left Logo) */}
-      <button
-        onClick={() => {
-          setIsOpen(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-        className="fixed top-8 left-8 z-[120] w-14 h-14 group flex items-center justify-center pointer-events-auto cursor-pointer"
-        aria-label="Volver al inicio"
-      >
-        <img
-          src="/mega_seguridad_black_logo.png"
-          alt="Inicio"
-          className="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(0,255,102,0.15)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,102,0.4)] transition-all duration-300 hover:scale-105 origin-center"
-        />
-      </button>
-
-      {/* Unified Morphing Menu Button */}
-      <MorphingMenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      {/* Botones de navegación (Hamburger y Logo Top Left) retirados temporalmente según revisión */}
 
       {/* Main Container Overlay */}
       <AnimatePresence>
