@@ -3,16 +3,14 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#020205] text-zinc-400 border-t border-white/10 pt-24 pb-12 relative z-10 w-full font-sans">
+    <footer className="bg-mega-black text-mega-silver border-t border-white/5 pt-24 pb-12 relative z-10 w-full font-sans">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-12 lg:gap-8">
         {/* Brand & Logo Section */}
         <div className="lg:col-span-2 space-y-6">
-          <img
-            src="/logo_mega_cristal.png"
-            alt="MEGASEGURIDAD Logo"
-            className="h-14 object-contain opacity-90 hover:opacity-100 transition-opacity"
-          />
-          <p className="text-zinc-500 max-w-sm leading-relaxed text-sm lg:text-base">
+          <h2 className="text-3xl font-bold font-heading text-white tracking-wider uppercase mb-6">
+            MEGASEGURIDAD
+          </h2>
+          <p className="text-mega-silver/80 max-w-sm leading-relaxed text-sm lg:text-base">
             Consolidados desde 1979 como el referente indiscutible en la
             provisión de esquemas de protección premium, ingeniería tecnológica
             y operaciones tácticas a nivel nacional e internacional.
@@ -27,7 +25,7 @@ export default function Footer() {
 
         {/* Tactical Services */}
         <div className="space-y-6">
-          <h4 className="text-white font-bold tracking-widest uppercase text-sm">
+          <h4 className="text-mega-cyan font-heading tracking-widest uppercase text-xl">
             Nuestro Arsenal
           </h4>
           <ul className="space-y-3 text-sm">
@@ -81,12 +79,12 @@ export default function Footer() {
 
         {/* Command Center Info */}
         <div className="space-y-6">
-          <h4 className="text-white font-bold tracking-widest uppercase text-sm">
+          <h4 className="text-mega-cyan font-heading tracking-widest uppercase text-xl">
             Centro de Mando
           </h4>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 text-sm mt-2">
             <li>
-              <span className="block text-xs text-zinc-600 mb-1">
+              <span className="block text-xs text-mega-cyan/60 font-semibold mb-1">
                 LÍNEA OPERATIVA
               </span>
               <a
@@ -97,26 +95,26 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <span className="block text-xs text-zinc-600 mb-1">
+              <span className="block text-xs text-mega-cyan/60 font-semibold mb-1">
                 COMUNICACIÓN CLASIFICADA
               </span>
               <a
                 href="mailto:info@megaseguridad.co"
-                className="text-white hover:underline"
+                className="text-white hover:underline transition-all"
               >
                 info@megaseguridad.co
               </a>
             </li>
             <li className="pt-2">
-              <span className="block text-xs text-zinc-600 mb-1 pb-1 border-b border-white/5">
+              <span className="block text-xs text-mega-cyan/60 font-semibold mb-1 pb-2 border-b border-white/5">
                 DISPONIBILIDAD
               </span>
-              <div className="flex justify-between mt-2">
-                <span className="text-zinc-500">LUN - VIE</span>
+              <div className="flex justify-between mt-3">
+                <span className="text-mega-silver/80">LUN - VIE</span>
                 <span className="text-white font-mono">07:00 - 18:00</span>
               </div>
-              <div className="flex justify-between mt-1">
-                <span className="text-zinc-500">SÁBADO</span>
+              <div className="flex justify-between mt-2">
+                <span className="text-mega-silver/80">SÁBADO</span>
                 <span className="text-white font-mono">07:00 - 12:00</span>
               </div>
             </li>
@@ -125,7 +123,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-zinc-600">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-mono text-mega-silver/40">
         <p>
           © {new Date().getFullYear()} MEGASEGURIDAD LTDA. Todos los derechos
           reservados.
