@@ -1,9 +1,12 @@
 import qs from "qs";
 
 export function getStrapiURL(path = "") {
-  return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337"
-  }${path}`;
+  const isProd = process.env.NODE_ENV === "production";
+  const baseUrl = isProd 
+    ? process.env.NEXT_PUBLIC_STRAPI_API_URL_PROD 
+    : process.env.NEXT_PUBLIC_STRAPI_API_URL_DEV;
+
+  return `${baseUrl || "http://127.0.0.1:1337"}${path}`;
 }
 
 export function getStrapiMedia(url: string | null) {
@@ -13,9 +16,13 @@ export function getStrapiMedia(url: string | null) {
   if (url.startsWith("http") || url.startsWith("//")) {
     return url;
   }
-  return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://127.0.0.1:1337"
-  }${url}`;
+  
+  const isProd = process.env.NODE_ENV === "production";
+  const baseUrl = isProd 
+    ? process.env.NEXT_PUBLIC_STRAPI_API_URL_PROD 
+    : process.env.NEXT_PUBLIC_STRAPI_API_URL_DEV;
+
+  return `${baseUrl || "http://127.0.0.1:1337"}${url}`;
 }
 
 export async function fetchAPI(
