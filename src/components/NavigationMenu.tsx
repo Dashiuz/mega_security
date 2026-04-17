@@ -73,24 +73,7 @@ export default function NavigationMenu() {
 
   return (
     <>
-      {/* Return to Top Button (Top Left Logo) */}
-      <button
-        onClick={() => {
-          setIsOpen(false);
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-        className="fixed top-8 left-8 z-[120] w-14 h-14 group flex items-center justify-center pointer-events-auto cursor-pointer"
-        aria-label="Volver al inicio"
-      >
-        <img
-          src="/mega_seguridad_black_logo.png"
-          alt="Inicio"
-          className="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(0,255,102,0.15)] group-hover:drop-shadow-[0_0_20px_rgba(0,255,102,0.4)] transition-all duration-300 hover:scale-105 origin-center"
-        />
-      </button>
-
-      {/* Unified Morphing Menu Button */}
-      <MorphingMenuButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+      {/* Botones de navegación (Hamburger y Logo Top Left) retirados temporalmente según revisión */}
 
       {/* Main Container Overlay */}
       <AnimatePresence>
@@ -116,7 +99,7 @@ export default function NavigationMenu() {
               style={{ backgroundImage: `url('${tabImages[activeTab]}')` }}
             />
           </AnimatePresence>
-          {/* Grand Theft Auto VI style pink/purple/green vignette/gradient mappings */}
+          {/* Gradient mappings */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#020205]/50 to-[#020205] z-10 pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#020205] via-transparent to-transparent opacity-90 z-10 pointer-events-none" />
         </div>
@@ -131,7 +114,7 @@ export default function NavigationMenu() {
             >
               <div className="p-8 lg:p-14 lg:pt-20 pt-20 flex-1 flex flex-col relative w-full h-full">
                 
-                {/* Horizontal Navbar Tabs (GTA VI Style List) */}
+                {/* Horizontal Navbar Tabs */}
                 <nav className="flex flex-wrap gap-x-8 gap-y-6 mb-16 mt-4 border-b border-white/10 pb-4 w-[90%] lg:w-full">
                   {tabs.map((tab) => (
                     <button
