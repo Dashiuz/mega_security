@@ -25,7 +25,7 @@ export default function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="text-xl md:text-2xl font-black tracking-tighter text-mega-white select-none pointer-events-none"
+              className="text-xl md:text-2xl font-black tracking-wider text-mega-white select-none pointer-events-none"
             >
               {logo}
             </motion.div>

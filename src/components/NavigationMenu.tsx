@@ -154,7 +154,7 @@ export default function NavigationMenu() {
                         transition={{ duration: 0.4 }}
                         className="w-full"
                       >
-                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter w-full">
+                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider w-full">
                           <li className="w-full flex">
                             <a
                               href="#legado"
@@ -217,7 +217,7 @@ export default function NavigationMenu() {
                         transition={{ duration: 0.4 }}
                         className="w-full"
                       >
-                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter w-full">
+                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider w-full">
                           <li className="w-full flex">
                             <a
                               href="#soluciones"
@@ -292,7 +292,7 @@ export default function NavigationMenu() {
                         transition={{ duration: 0.4 }}
                         className="w-full"
                       >
-                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter w-full">
+                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider w-full">
                           <li className="w-full flex">
                             <a
                               href="#cotizacion"
@@ -319,7 +319,7 @@ export default function NavigationMenu() {
                         transition={{ duration: 0.4 }}
                         className="w-full"
                       >
-                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter w-full">
+                        <ul className="space-y-6 lg:space-y-8 flex flex-col text-2xl md:text-4xl lg:text-5xl font-black uppercase tracking-wider w-full">
                           <li className="w-full flex">
                             <a
                               href="#contacto"

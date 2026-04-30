@@ -31,7 +31,7 @@ export default function SectionContacto() {
           
           <div className="space-y-4 xl:space-y-6">
             <span className="text-mega-green font-mono uppercase tracking-[0.3em] text-xs xl:text-sm font-bold block">IV. Enlace Operativo</span>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-black text-white leading-[0.9] uppercase tracking-tighter">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-[5rem] font-black text-white leading-[0.9] uppercase tracking-wider">
               Línea<br/>
               Directa de<br/>
               <span className="text-mega-green">Operaciones</span>

@@ -28,46 +28,50 @@ export default function SectionSoluciones() {
     <section id="servicios" className="w-full bg-mega-black py-24 md:py-32 relative z-20 border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         
-        <div className="flex flex-col lg:flex-row justify-between items-end gap-10 mb-16">
-          <div className="flex-1">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+          
+          {/* Columna Izquierda: Sticky Header */}
+          <div className="lg:w-1/3 lg:sticky lg:top-32 flex flex-col justify-start pt-10">
             <p className="text-mega-cyan font-semibold tracking-wider text-sm md:text-base mb-4 uppercase">
               Nuestros servicios
             </p>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.05]">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-white leading-[1.05] mb-6">
               SOLUCIONES PARA CADA<br />
               <span className="text-mega-green bg-clip-text">TIPO DE RIESGO</span>
             </h2>
-          </div>
-          <div className="flex-1 lg:text-right max-w-lg">
             <p className="text-lg md:text-xl text-mega-silver font-light leading-relaxed">
               Cada servicio se configura según el nivel de riesgo, el entorno operativo y los objetivos de su empresa.
             </p>
           </div>
-        </div>
 
-        {/* 6-Block Grid */}
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
-        >
-          {services.map((svc, i) => (
-            <motion.div 
-              key={i}
-              variants={item} 
-              className="group bg-[#051112] hover:bg-[#0a2326] p-8 md:p-10 rounded-xl border border-white/5 hover:border-mega-cyan/40 transition-all duration-500 cursor-default flex flex-col justify-end min-h-[300px]"
-            >
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-mega-cyan transition-colors duration-300">{svc.title}</h3>
-                <p className="text-mega-silver font-light leading-relaxed text-sm md:text-base opacity-80 group-hover:opacity-100 transition-opacity">
-                  {svc.desc}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+          {/* Columna Derecha: Sticky Cards Track */}
+          <div className="lg:w-2/3 flex flex-col gap-6 lg:gap-8 pb-10 lg:pb-32 relative">
+            {services.map((svc, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="sticky w-full rounded-[2rem] bg-[#051112] border border-white/5 p-8 md:p-12 shadow-[0_-15px_40px_rgba(0,0,0,0.6)] transition-colors hover:border-mega-cyan/40 group"
+                style={{ top: `calc(8rem + ${idx * 2.5}rem)` }}
+              >
+                {/* Efecto Brillante al Hover */}
+                <div className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition duration-500 will-change-transform bg-gradient-to-br from-mega-cyan/0 via-mega-cyan/5 to-transparent pointer-events-none" />
+                
+                <div className="relative z-10 flex flex-col items-start">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-mega-cyan transition-colors duration-300 tracking-wide">
+                    {svc.title}
+                  </h3>
+                  <p className="text-lg md:text-xl text-mega-silver font-light leading-relaxed group-hover:text-mega-silver/90 transition-colors">
+                    {svc.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          
+        </div>
       </div>
     </section>
   );
