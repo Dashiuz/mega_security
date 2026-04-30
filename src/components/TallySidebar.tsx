@@ -4,9 +4,15 @@ import React, { useState, useEffect } from "react";
 
 export default function TallySidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [formId, setFormId] = useState("VLMgEl");
+  const [formTitle, setFormTitle] = useState("Diagnóstico Online");
 
   useEffect(() => {
-    const handleOpen = () => setIsOpen(true);
+    const handleOpen = (e: any) => {
+      setFormId(e.detail?.formId || "VLMgEl");
+      setFormTitle(e.detail?.formTitle || "Diagnóstico Online");
+      setIsOpen(true);
+    };
     window.addEventListener("open-tally-sidebar", handleOpen);
     return () => window.removeEventListener("open-tally-sidebar", handleOpen);
   }, []);
@@ -43,7 +49,7 @@ export default function TallySidebar() {
         className={`fixed top-0 right-0 h-full w-full sm:w-[450px] md:w-[500px] bg-mega-black border-l border-white/10 z-[210] transform transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col ${isOpen ? "translate-x-0" : "translate-x-full shadow-[-20px_0_40px_rgba(0,124,142,0.1)]"}`}
       >
         <div className="flex justify-between items-center p-6 border-b border-white/5">
-          <h3 className="text-white font-heading text-2xl tracking-widest uppercase">Diagnóstico Online</h3>
+          <h3 className="text-white font-heading text-2xl tracking-widest uppercase">{formTitle}</h3>
           <button 
             onClick={() => setIsOpen(false)}
             className="text-mega-silver hover:text-mega-cyan transition-colors"
@@ -57,7 +63,8 @@ export default function TallySidebar() {
         
         <div className="flex-1 w-full bg-transparent overflow-y-auto overflow-x-hidden p-0 m-0">
           <iframe 
-            data-tally-src="https://tally.so/embed/VLMgEl?alignLeft=1&hideTitle=1&transparentBackground=1" 
+            key={formId}
+            data-tally-src={`https://tally.so/embed/${formId}?alignLeft=1&hideTitle=1&transparentBackground=1`} 
             loading="lazy" 
             width="100%" 
             height="100%" 

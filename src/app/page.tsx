@@ -30,7 +30,7 @@ export default function Home() {
         <SectionOperativa />
         <SectionFilosofia />
         <SectionComoTrabajamos />
-        <TeaserInteligencia />
+        {/* <TeaserInteligencia /> */}
 
         {/* El Footer flotando al final */}
         <Footer />

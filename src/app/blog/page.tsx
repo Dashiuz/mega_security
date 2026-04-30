@@ -35,7 +35,7 @@ export default async function HubInteligencia() {
           <Link href="/" className="text-mega-cyan/60 hover:text-mega-cyan uppercase tracking-widest text-xs font-bold mb-6 inline-block transition-colors">
             ← Volver a Operaciones
           </Link>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-none">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-wider text-white mb-6 leading-none">
             INTELIGENCIA<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-mega-cyan to-mega-green">ESTRATÉGICA</span>
           </h1>
