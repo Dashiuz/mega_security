@@ -72,7 +72,7 @@ export default async function BlogArticleView({ params }: { params: Promise<{ sl
             </span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-8 font-heading leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-wider text-white mb-8 font-heading leading-tight">
             {article.title}
           </h1>
 

@@ -11,7 +11,7 @@ export default function SectionLegado() {
         <div className="space-y-8">
           <div className="flex flex-col gap-2">
             <span className="text-mega-green font-mono uppercase tracking-[0.3em] text-sm font-bold">I. Legado Corporativo</span>
-            <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] uppercase tracking-tighter">
+            <h2 className="text-5xl md:text-7xl font-black text-white leading-[0.9] uppercase tracking-wider">
               Custodiando<br/>
               su <span className="text-transparent bg-clip-text bg-gradient-to-r from-mega-green to-white">tranquilidad</span><br/>
               desde 1979.

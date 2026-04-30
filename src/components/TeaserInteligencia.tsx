@@ -34,7 +34,7 @@ export default async function TeaserInteligencia() {
         {/* Header de Sección */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-wider text-white mb-4">
               INTELIGENCIA<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-mega-cyan to-mega-green">CORPORATIVA</span>
             </h2>

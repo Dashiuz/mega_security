@@ -29,7 +29,7 @@ export default function SectionCotizacion() {
 
         <div className="space-y-6">
             <span className="text-mega-green font-mono uppercase tracking-[0.3em] text-sm font-bold block">III. Evaluación Algorítmica</span>
-            <h2 className="text-6xl md:text-8xl font-black text-white leading-[0.9] uppercase tracking-tighter">
+            <h2 className="text-6xl md:text-8xl font-black text-white leading-[0.9] uppercase tracking-wider">
                 Blindaje<br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-b from-zinc-400 to-zinc-700">Predictivo</span>
             </h2>
