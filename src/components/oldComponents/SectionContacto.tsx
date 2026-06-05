@@ -103,7 +103,7 @@ export default function SectionContacto() {
             </div>
 
             <div className="pt-2 xl:pt-4 flex items-center justify-between group cursor-pointer">
-              <button disabled={isSubmitting} className="flex-1 bg-white hover:bg-mega-green text-black font-black uppercase tracking-widest py-4 xl:py-6 px-6 xl:px-8 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-between">
+              <button disabled={isSubmitting} className="btn-premium-cta flex-1 font-black uppercase tracking-widest py-4 xl:py-6 px-6 xl:px-8 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-between rounded-sm">
                 <span className="text-xs xl:text-base">{isSubmitting ? "Transfiriendo Datos..." : "Desplegar Operativo"}</span>
                 <ArrowRight className={`w-5 h-5 xl:w-6 xl:h-6 transition-transform duration-300 ${isSubmitting ? "translate-x-4 opacity-0" : "group-hover:translate-x-2"}`} />
               </button>

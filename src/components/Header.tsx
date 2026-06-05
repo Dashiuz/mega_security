@@ -45,7 +45,7 @@ export default function Header() {
     <header
       className={`fixed top-0 inset-x-0 z-[100] transition-all duration-300 ${scrolled ? "bg-[#030F0F]/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"}`}
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 flex items-center justify-between">
+      <div className="container mx-auto px-6 md:px-12 lg:px-8 xl:px-24 flex items-center justify-between">
         {/* Logo / Home trigger */}
         <a
           href="#top"
@@ -56,41 +56,41 @@ export default function Header() {
         </a>
 
         {/* Links de Navegación */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
           <a
-            href="#problema"
-            onClick={(e) => handleNavClick(e, "problema")}
-            className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-cyan transition-colors"
+            href="#megaseguridad"
+            onClick={(e) => handleNavClick(e, "megaseguridad")}
+            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
           >
-            El problema
+            Megaseguridad
           </a>
           <a
-            href="#servicios"
-            onClick={(e) => handleNavClick(e, "servicios")}
-            className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-cyan transition-colors"
+            href="#que-hacemos"
+            onClick={(e) => handleNavClick(e, "que-hacemos")}
+            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
           >
-            Servicios
+            Qué Hacemos
           </a>
           <a
-            href="#operativa"
-            onClick={(e) => handleNavClick(e, "operativa")}
-            className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-cyan transition-colors"
+            href="#como-lo-hacemos"
+            onClick={(e) => handleNavClick(e, "como-lo-hacemos")}
+            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
           >
-            Por qué Megaseguridad
+            Cómo lo Hacemos
           </a>
           <a
-            href="#filosofia"
-            onClick={(e) => handleNavClick(e, "filosofia")}
-            className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-cyan transition-colors"
+            href="#para-quien-lo-hacemos"
+            onClick={(e) => handleNavClick(e, "para-quien-lo-hacemos")}
+            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
           >
-            Nuestra Filosofía
+            Para Quien lo Hacemos
           </a>
           <a
-            href="#como-trabajamos"
-            onClick={(e) => handleNavClick(e, "como-trabajamos")}
-            className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-cyan transition-colors"
+            href="#por-que-elegirnos"
+            onClick={(e) => handleNavClick(e, "por-que-elegirnos")}
+            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
           >
-            Como Trabajamos
+            Por Qué Elegirnos
           </a>
           {/* <a href="/blog" className="text-sm font-medium text-mega-silver/80 uppercase tracking-widest hover:text-mega-green transition-colors">
             Inteligencia
@@ -99,9 +99,11 @@ export default function Header() {
           <div className="relative inline-block">
             <button
               onClick={() => setIsOptionsOpen(!isOptionsOpen)}
-              className="bg-[#425C74] hover:bg-[#344E66] border border-[#526D85] text-white px-6 py-2.5 text-sm uppercase tracking-wide rounded-sm transition-colors duration-300 flex items-center justify-between gap-2 z-20 relative w-[220px]"
+              className="btn-premium-cta px-4 xl:px-6 py-2 xl:py-2.5 text-xs xl:text-sm uppercase tracking-wider xl:tracking-wide rounded-sm flex items-center justify-between gap-2 z-20 relative w-[180px] xl:w-[220px]"
             >
-              <span className="flex-1 text-center">{isOptionsOpen ? "CERRAR OPCIONES" : "SOLICITUDES"}</span>
+              <span className="flex-1 text-center">
+                {isOptionsOpen ? "CERRAR OPCIONES" : "SOLICITUDES"}
+              </span>
               <motion.svg
                 animate={{ rotate: isOptionsOpen ? 180 : 0 }}
                 className="w-4 h-4 relative z-10"
@@ -142,7 +144,7 @@ export default function Header() {
                           new CustomEvent("open-tally-sidebar", {
                             detail: {
                               formId: "VLMgEl",
-                              formTitle: "Diagnóstico Online",
+                              formTitle: "Solicitar Cotización",
                             },
                           }),
                         ),
@@ -154,7 +156,8 @@ export default function Header() {
                           new CustomEvent("open-tally-sidebar", {
                             detail: {
                               formId: "rj2DpN",
-                              formTitle: "Agendar Llamada",
+                              formTitle:
+                                "Agende una llamada con uno de nuestros especialistas",
                             },
                           }),
                         ),
