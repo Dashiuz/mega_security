@@ -3,8 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function SectionSoluciones() {
-  
+export default function SectionQueHacemos() {
+
   const services = [
     { title: "Vigilancia Física", desc: "Personal altamente capacitado y seleccionado con estándares biométricos y verificación de más de 100 fuentes. Presencia disuasiva y profesional en cualquier sector económico." },
     { title: "Monitoreo Tecnológico", desc: "Analítica avanzada de video, monitoreo IP en tiempo real y respaldo en la nube. Vigilancia 24/7 con inteligencia artificial aplicada a la detección y alertamiento temprano." },
@@ -25,11 +25,11 @@ export default function SectionSoluciones() {
   };
 
   return (
-    <section id="servicios" className="w-full bg-mega-black py-24 md:py-32 relative z-20 border-t border-white/5">
+    <section id="que-hacemos" className="w-full bg-mega-black py-24 md:py-32 relative z-20 border-t border-white/5">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
-        
+
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-          
+
           {/* Columna Izquierda: Sticky Header */}
           <div className="lg:w-1/3 lg:sticky lg:top-32 flex flex-col justify-start pt-10">
             <p className="text-mega-cyan font-semibold tracking-wider text-sm md:text-base mb-4 uppercase">
@@ -58,7 +58,7 @@ export default function SectionSoluciones() {
               >
                 {/* Efecto Brillante al Hover */}
                 <div className="absolute -inset-px rounded-[2rem] opacity-0 group-hover:opacity-100 transition duration-500 will-change-transform bg-gradient-to-br from-mega-cyan/0 via-mega-cyan/5 to-transparent pointer-events-none" />
-                
+
                 <div className="relative z-10 flex flex-col items-start">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-mega-cyan transition-colors duration-300 tracking-wide">
                     {svc.title}
@@ -70,7 +70,7 @@ export default function SectionSoluciones() {
               </motion.div>
             ))}
           </div>
-          
+
         </div>
       </div>
     </section>

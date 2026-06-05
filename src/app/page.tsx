@@ -1,11 +1,12 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import SocialProof from "../components/SocialProof";
-import SectionProblema from "../components/SectionProblema";
-import SectionSoluciones from "../components/SectionSoluciones";
-import SectionOperativa from "../components/SectionOperativa";
-import SectionComoTrabajamos from "../components/SectionComoTrabajamos";
-import SectionFilosofia from "../components/SectionFilosofia";
+import SectionMegaseguridad from "../components/SectionMegaseguridad";
+import SectionQueHacemos from "../components/SectionQueHacemos";
+import SectionComoLoHacemos from "../components/SectionComoLoHacemos";
+import SectionPorQueElegirnos from "../components/SectionPorQueElegirnos";
+import SectionParaQuienLoHacemos from "../components/SectionParaQuienLoHacemos";
+import SectionNuestraOferta from "../components/SectionNuestraOferta";
 import TeaserInteligencia from "../components/TeaserInteligencia";
 import Footer from "@/components/Footer";
 import ParticleWrapper from "@/components/ParticleWrapper";
@@ -21,15 +22,18 @@ export default function Home() {
         {/* El Hero transparente */}
         <Hero />
 
+        {/* Nueva sección Nuestra Oferta */}
+        <SectionNuestraOferta />
+
         {/* Bloque de Social Proof justo después del scroll inicial */}
         <SocialProof />
 
         {/* Secciones de flujo SPA con refactorización visual interactiva */}
-        <SectionProblema />
-        <SectionSoluciones />
-        <SectionOperativa />
-        <SectionFilosofia />
-        <SectionComoTrabajamos />
+        <SectionMegaseguridad />
+        <SectionQueHacemos />
+        <SectionComoLoHacemos />
+        <SectionParaQuienLoHacemos />
+        <SectionPorQueElegirnos />
         {/* <TeaserInteligencia /> */}
 
         {/* El Footer flotando al final */}

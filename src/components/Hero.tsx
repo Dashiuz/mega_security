@@ -26,7 +26,7 @@ export default function Hero() {
     <section className="relative w-full min-h-screen flex items-center justify-start overflow-hidden bg-transparent z-10 font-sans">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 pt-32 pb-20 relative z-20">
         <motion.div
-          className="max-w-4xl"
+          className="max-w-5xl"
           initial="hidden"
           animate="visible"
           variants={stagger}
@@ -41,38 +41,79 @@ export default function Hero() {
           {/* Gran titular */}
           <motion.h1
             variants={item}
-            className="text-5xl md:text-7xl lg:text-[5.5rem] font-bold leading-[0.95] tracking-wider text-white mb-8"
+            className="text-4xl md:text-6xl lg:text-[4.5rem] font-bold leading-[1.05] tracking-wider text-white mb-8 uppercase"
           >
-            LA SEGURIDAD
+            Diseñamos soluciones de seguridad a
             <br />
-            <span className="text-mega-white">QUE REALMENTE</span>
+            la medida de las necesidades de
+            <br />
+            nuestros clientes con la mejor
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-mega-cyan to-mega-green">
-              PROTEGE SU NEGOCIO
+              relación costo-beneficio
             </span>
           </motion.h1>
 
-          {/* Párrafo de apertura */}
-          <motion.p
-            variants={item}
-            className="text-lg md:text-xl text-mega-silver max-w-2xl mb-10 leading-relaxed font-light"
-          >
-            Personal verificado, tecnología integrada y supervisión continua. No
-            es solo un servicio de vigilancia,{" "}
-            <strong className="text-mega-white font-medium">
-              es un sistema de protección
-            </strong>{" "}
-            que opera incluso cuando nadie lo está mirando.
-          </motion.p>
+          {/* Párrafo de apertura y Misión */}
+          <motion.div variants={item} className="space-y-6 max-w-3xl mb-12">
+            <p className="text-lg md:text-xl text-mega-silver font-light leading-relaxed border-l-2 border-mega-cyan/40 pl-6">
+              Nuestra misión es proteger personas, activos e infraestructura con soluciones integrales que combinen experiencia, talento humano confiable y tecnología con resultados verificables.
+            </p>
+            <p className="text-sm md:text-base text-mega-silver/70 font-light leading-relaxed">
+              En Megaseguridad no ofrecemos esquemas genéricos ni soluciones improvisadas. Analizamos la realidad de cada operación para diseñar un modelo de seguridad ajustado a sus riesgos, necesidades y presupuesto con el equilibrio correcto entre protección, eficiencia y costo.
+            </p>
+          </motion.div>
 
-          <motion.div variants={item} className="mb-20">
+          {/* Botones de llamados a la acción */}
+          <motion.div variants={item} className="flex flex-wrap gap-4 mb-20">
             <button
-              onClick={() => window.dispatchEvent(new CustomEvent('open-tally-sidebar', { 
-                detail: { formId: 'rj2DpN', formTitle: 'Agendar Llamada' } 
-              }))}
-              className="group relative overflow-hidden bg-mega-cyan text-mega-white px-8 py-4 font-semibold text-lg tracking-wide rounded-sm transition-all duration-300 hover:bg-[#005e6b] hover:shadow-[0_0_30px_rgba(0,124,142,0.4)]"
+              onClick={() =>
+                window.dispatchEvent(
+                  new CustomEvent("open-tally-sidebar", {
+                    detail: {
+                      formId: "rj2DpN",
+                      formTitle: "Agende una llamada con uno de nuestros especialistas",
+                    },
+                  }),
+                )
+              }
+              className="btn-premium-cta group relative overflow-hidden px-8 py-4 font-semibold text-base tracking-wide rounded-sm"
             >
-              Agendar llamada gratuita
+              <span className="relative z-10">Agendar llamada gratuita</span>
+              <div className="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-[400ms] ease-out group-hover:w-full" />
+            </button>
+
+            <button
+              onClick={() =>
+                window.dispatchEvent(
+                  new CustomEvent("open-tally-sidebar", {
+                    detail: {
+                      formId: "VLMgEl",
+                      formTitle: "Solicitar Cotización",
+                    },
+                  }),
+                )
+              }
+              className="btn-premium-cta group relative overflow-hidden px-8 py-4 font-semibold text-base tracking-wide rounded-sm"
+            >
+              <span className="relative z-10">Solicitar cotización</span>
+              <div className="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-[400ms] ease-out group-hover:w-full" />
+            </button>
+
+            <button
+              onClick={() =>
+                window.dispatchEvent(
+                  new CustomEvent("open-tally-sidebar", {
+                    detail: {
+                      formId: "jaGe2a",
+                      formTitle: "Programar Visita",
+                    },
+                  }),
+                )
+              }
+              className="btn-premium-cta group relative overflow-hidden px-8 py-4 font-semibold text-base tracking-wide rounded-sm"
+            >
+              <span className="relative z-10">Programar visita</span>
               <div className="absolute inset-0 h-full w-0 bg-white/20 transition-all duration-[400ms] ease-out group-hover:w-full" />
             </button>
           </motion.div>
@@ -80,38 +121,57 @@ export default function Hero() {
           {/* Stats Footer del Hero */}
           <motion.div
             variants={item}
-            className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 border-t border-mega-cyan/20 pt-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-8 border-t border-mega-cyan/20 pt-10"
           >
             <div>
               <p className="text-4xl md:text-5xl font-bold text-white tracking-wider mb-1">
-                45+
+                47
               </p>
-              <p className="text-mega-silver text-sm uppercase tracking-wider font-semibold">
+              <p className="text-mega-white font-bold text-xs lg:text-sm uppercase tracking-wider mb-1">
                 Años de experiencia
+              </p>
+              <p className="text-mega-silver text-xs font-light">
+                Fundados en 1979
               </p>
             </div>
             <div>
               <p className="text-4xl md:text-5xl font-bold text-white tracking-wider mb-1">
                 11
               </p>
-              <p className="text-mega-silver text-sm uppercase tracking-wider font-semibold">
+              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-1">
                 Departamentos
               </p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-bold text-mega-green tracking-wider mb-1">
-                6
+              <p className="text-mega-silver text-xs font-light">
+                con cobertura
               </p>
-              <p className="text-mega-silver text-sm uppercase tracking-wider font-semibold">
-                Tipos de licencia habilitantes
+            </div>
+            <div className="pt-2">
+              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
+                Soluciones a la medida
+              </p>
+              <p className="text-mega-silver text-xs font-light leading-relaxed">
+                Cada operación analizada y diseñada según sus riesgos y presupuesto
+              </p>
+            </div>
+            <div className="pt-2">
+              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
+                Tecnología con propósito
+              </p>
+              <p className="text-mega-silver text-xs font-light leading-relaxed">
+                Herramientas seleccionadas con criterio estratégico, no por tendencia
+              </p>
+            </div>
+            <div className="pt-2">
+              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
+                Selección con IA y oculometría
+              </p>
+              <p className="text-mega-silver text-xs font-light leading-relaxed">
+                Procesos de verificación de confiabilidad potenciados por inteligencia artificial
               </p>
             </div>
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Gradientes oscuros estructurales en la parte inferior para fusionarse con la siguiente sección SPA */}
-      <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-mega-black to-transparent pointer-events-none" />
     </section>
   );
 }

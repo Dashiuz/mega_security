@@ -5,10 +5,10 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import SectionLegado from "../SectionLegado";
-import SectionSoluciones from "../SectionSoluciones";
-import SectionCotizacion from "../SectionCotizacion";
-import SectionContacto from "../SectionContacto";
+import SectionLegado from "../oldComponents/SectionLegado";
+import SectionSoluciones from "../SectionQueHacemos";
+import SectionCotizacion from "../oldComponents/SectionCotizacion";
+import SectionContacto from "../oldComponents/SectionContacto";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -43,7 +43,7 @@ export default function StackedSections() {
           },
           scale: 0.9, // Se encoge sutilmente hacia el fondo
           y: -30, // Se empuja sutilmente hacia arriba creando verdadera profundidad
-          
+
           // ELIMINADA LA OPACIDAD Y EL BRILLO: Evita que la tarjeta desaparezca prematuramente
           // y previene el horrible pop-in al hacer scroll-up
 
