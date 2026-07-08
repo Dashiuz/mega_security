@@ -3,6 +3,72 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const bentoCards = [
+  {
+    title: "47 AÑOS",
+    subtitle: "De experiencia",
+    desc: "Fundada en 1979",
+    image: "/hero_images/collin-8FxJi5wuwKc-unsplash.jpg",
+    className: "md:col-span-1 md:row-span-2 min-h-[360px] md:min-h-full",
+    titleClass: "text-4xl md:text-5xl mb-1",
+    contentClass: "items-start text-left",
+  },
+  {
+    title: "11",
+    subtitle: "Departamentos",
+    desc: "",
+    image: "/hero_images/giovanny-gomez-perez-jMLilxLyjUg-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-2xl md:text-3xl",
+    contentClass: "items-start text-left",
+  },
+  {
+    title: "SELECCIÓN CON IA Y OCULOMETRÍA",
+    subtitle: "",
+    desc: "Verificación de confiabilidad potenciada por inteligencia artificial.",
+    image: "/hero_images/v2osk-In4XVKhYaiI-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-sm md:text-base leading-tight",
+    contentClass: "items-start text-left",
+  },
+  {
+    title: "24/7",
+    subtitle: "Línea operativa",
+    desc: "",
+    image: "/hero_images/vagaro-5skDrjF5EMw-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-2xl md:text-3xl",
+    contentClass: "items-end text-right",
+  },
+  {
+    title: "8",
+    subtitle: "Licencias habilitantes",
+    desc: "",
+    image: "/hero_images/worshae-g10uqy6QCM0-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-2xl md:text-3xl",
+    contentClass: "items-start text-left",
+  },
+  {
+    title: "SOLUCIONES A LA MEDIDA",
+    subtitle: "",
+    desc: "Cada operación analizada y diseñada según sus riesgos y presupuestos.",
+    image: "/hero_images/chuttersnap-Dty_WdBe_FE-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-sm md:text-base",
+    contentClass: "items-start text-left",
+  },
+  {
+    title: "+45",
+    subtitle: "Sectores atendidos",
+    desc: "",
+    image: "/hero_images/ella-don-aL-rQE0Ljks-unsplash.jpg",
+    className: "col-span-1 min-h-[180px] md:min-h-[200px]",
+    titleClass: "text-2xl md:text-3xl",
+    contentClass: "items-end text-right",
+  },
+];
+
 export default function Hero() {
   const stagger: any = {
     hidden: { opacity: 0, y: 30 },
@@ -118,57 +184,46 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* Stats Footer del Hero */}
+          {/* Stats Footer del Hero - Bento Grid Interactivo */}
           <motion.div
             variants={item}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-8 border-t border-mega-cyan/20 pt-10"
+            className="grid grid-cols-1 md:grid-cols-4 gap-0 border-t border-mega-cyan/20 mt-10 shadow-2xl relative"
           >
-            <div>
-              <p className="text-4xl md:text-5xl font-bold text-white tracking-wider mb-1">
-                47
-              </p>
-              <p className="text-mega-white font-bold text-xs lg:text-sm uppercase tracking-wider mb-1">
-                Años de experiencia
-              </p>
-              <p className="text-mega-silver text-xs font-light">
-                Fundados en 1979
-              </p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-bold text-white tracking-wider mb-1">
-                11
-              </p>
-              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-1">
-                Departamentos
-              </p>
-              <p className="text-mega-silver text-xs font-light">
-                con cobertura
-              </p>
-            </div>
-            <div className="pt-2">
-              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
-                Soluciones a la medida
-              </p>
-              <p className="text-mega-silver text-xs font-light leading-relaxed">
-                Cada operación analizada y diseñada según sus riesgos y presupuesto
-              </p>
-            </div>
-            <div className="pt-2">
-              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
-                Tecnología con propósito
-              </p>
-              <p className="text-mega-silver text-xs font-light leading-relaxed">
-                Herramientas seleccionadas con criterio estratégico, no por tendencia
-              </p>
-            </div>
-            <div className="pt-2">
-              <p className="text-mega-white font-bold text-xs lg:text-sm tracking-wide mb-2">
-                Selección con IA y oculometría
-              </p>
-              <p className="text-mega-silver text-xs font-light leading-relaxed">
-                Procesos de verificación de confiabilidad potenciados por inteligencia artificial
-              </p>
-            </div>
+            {bentoCards.map((card, idx) => (
+              <div
+                key={idx}
+                className={`relative group overflow-hidden bg-mega-black transition-all duration-300 hover:z-10 cursor-pointer flex flex-col justify-end p-5 md:p-6 hover:shadow-[0_0_30px_rgba(33,221,111,0.3)] ${card.className}`}
+              >
+                {/* Outline de neon interno sin shift de layout */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 outline outline-2 outline-mega-green -outline-offset-2 z-20" />
+
+                {/* Background Image */}
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-75 transition-all duration-300 scale-100 group-hover:scale-105"
+                />
+                {/* Gradient Overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#030F0F]/90 via-[#030F0F]/30 to-transparent" />
+                
+                {/* Text Content */}
+                <div className={`relative z-10 flex flex-col ${card.contentClass}`}>
+                  <h3 className={`font-bold text-white tracking-wider font-heading uppercase drop-shadow-md group-hover:text-mega-green transition-colors duration-300 ${card.titleClass}`}>
+                    {card.title}
+                  </h3>
+                  {card.subtitle && (
+                    <p className="text-mega-white font-bold text-[10px] md:text-sm uppercase tracking-wider mb-1 drop-shadow-md">
+                      {card.subtitle}
+                    </p>
+                  )}
+                  {card.desc && (
+                    <p className="text-mega-silver text-[10px] md:text-xs font-light leading-relaxed drop-shadow-md max-w-[95%]">
+                      {card.desc}
+                    </p>
+                  )}
+                </div>
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </div>

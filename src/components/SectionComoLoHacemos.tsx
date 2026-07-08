@@ -291,7 +291,19 @@ export default function SectionComoLoHacemos() {
               </p>
 
               {/* CTA */}
-              <button className="btn-premium-cta px-8 py-4 rounded-xl text-sm uppercase tracking-wider">
+              <button
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent("open-tally-sidebar", {
+                      detail: {
+                        formId: "VLMgEl",
+                        formTitle: "Solicite un diagnóstico para su operación",
+                      },
+                    }),
+                  )
+                }
+                className="btn-premium-cta px-8 py-4 rounded-xl text-sm uppercase tracking-wider"
+              >
                 Solicite un diagnóstico para su operación
               </button>
             </div>

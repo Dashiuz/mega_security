@@ -357,7 +357,19 @@ export default function SectionParaQuienLoHacemos() {
               </p>
 
               {/* CTA */}
-              <button className="btn-premium-cta px-8 py-4 rounded-xl text-sm uppercase tracking-wider">
+              <button
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent("open-tally-sidebar", {
+                      detail: {
+                        formId: "VLMgEl",
+                        formTitle: "Conozca la solución adecuada para su operación",
+                      },
+                    }),
+                  )
+                }
+                className="btn-premium-cta px-8 py-4 rounded-xl text-sm uppercase tracking-wider"
+              >
                 conozca la solución adecuada para su operación
               </button>
             </div>

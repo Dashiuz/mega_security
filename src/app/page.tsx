@@ -8,6 +8,7 @@ import SectionPorQueElegirnos from "../components/SectionPorQueElegirnos";
 import SectionParaQuienLoHacemos from "../components/SectionParaQuienLoHacemos";
 import SectionNuestraOferta from "../components/SectionNuestraOferta";
 import TeaserInteligencia from "../components/TeaserInteligencia";
+import SectionEquipoDirectivo from "../components/SectionEquipoDirectivo";
 import Footer from "@/components/Footer";
 import ParticleWrapper from "@/components/ParticleWrapper";
 
@@ -35,6 +36,8 @@ export default function Home() {
         <SectionParaQuienLoHacemos />
         <SectionPorQueElegirnos />
         {/* <TeaserInteligencia /> */}
+
+        <SectionEquipoDirectivo />
 
         {/* El Footer flotando al final */}
         <Footer />

@@ -60,35 +60,35 @@ export default function Header() {
           <a
             href="#megaseguridad"
             onClick={(e) => handleNavClick(e, "megaseguridad")}
-            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
+            className="text-xs xl:text-sm font-medium text-white uppercase tracking-wider xl:tracking-widest hover:text-mega-green active:text-white focus:text-white transition-colors"
           >
             Megaseguridad
           </a>
           <a
             href="#que-hacemos"
             onClick={(e) => handleNavClick(e, "que-hacemos")}
-            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
+            className="text-xs xl:text-sm font-medium text-white uppercase tracking-wider xl:tracking-widest hover:text-mega-green active:text-white focus:text-white transition-colors"
           >
             Qué Hacemos
           </a>
           <a
             href="#como-lo-hacemos"
             onClick={(e) => handleNavClick(e, "como-lo-hacemos")}
-            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
+            className="text-xs xl:text-sm font-medium text-white uppercase tracking-wider xl:tracking-widest hover:text-mega-green active:text-white focus:text-white transition-colors"
           >
             Cómo lo Hacemos
           </a>
           <a
             href="#para-quien-lo-hacemos"
             onClick={(e) => handleNavClick(e, "para-quien-lo-hacemos")}
-            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
+            className="text-xs xl:text-sm font-medium text-white uppercase tracking-wider xl:tracking-widest hover:text-mega-green active:text-white focus:text-white transition-colors"
           >
             Para Quien lo Hacemos
           </a>
           <a
             href="#por-que-elegirnos"
             onClick={(e) => handleNavClick(e, "por-que-elegirnos")}
-            className="text-xs xl:text-sm font-medium text-mega-silver/80 uppercase tracking-wider xl:tracking-widest hover:text-mega-cyan transition-colors"
+            className="text-xs xl:text-sm font-medium text-white uppercase tracking-wider xl:tracking-widest hover:text-mega-green active:text-white focus:text-white transition-colors"
           >
             Por Qué Elegirnos
           </a>
