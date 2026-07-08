@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
 import Script from "next/script";
 import TallySidebar from "@/components/TallySidebar";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Header />
         {children}
         <TallySidebar />
+        <WhatsAppWidget />
         <Script src="https://tally.so/widgets/embed.js" strategy="lazyOnload" />
       </body>
     </html>
